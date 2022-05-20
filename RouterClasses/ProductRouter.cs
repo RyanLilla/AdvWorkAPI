@@ -1,8 +1,9 @@
 namespace AdvWorksAPI {
     public class ProductRouter : RouterBase {
-        public ProductRouter()
+        public ProductRouter(ILogger<ProductRouter> logger)
         {
             UrlFragment = "product";
+            Logger = logger;
         }
 
         protected virtual List<Product> GetAll() {
@@ -41,6 +42,7 @@ namespace AdvWorksAPI {
         }
 
         protected virtual IResult Get() {
+            Logger.LogInformation("Getting all products.");
             return Results.Ok(GetAll());
         }
 
