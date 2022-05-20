@@ -123,6 +123,7 @@ namespace AdvWorksAPI {
             app.MapGet($"/{UrlFragment}/{{id:int}}", (int id) => Get(id));
             app.MapPost($"/{UrlFragment}", (Product entity) => Post(entity));
             app.MapPut($"/{UrlFragment}/{{id:int}}", (int id, Product entity) => Put(id, entity));
+            app.MapDelete($"/{UrlFragment}/{{id:int}}", (int id) => Delete(id));
         }
     }
 }
