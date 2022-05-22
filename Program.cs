@@ -8,6 +8,7 @@ builder.Logging.AddConsole();
 
 // Add "Router" classes as a service
 builder.Services.AddScoped<RouterBase, ProductRouter>();
+builder.Services.AddScoped<RouterBase, CustomerRouter>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
